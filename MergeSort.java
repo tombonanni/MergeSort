@@ -161,28 +161,28 @@ public class MergeSort {
 		}
 	}
 
-	public static void copyArray(int[] array, int[] temp, int start, int end){
+	private static void copyArray(int[] array, int[] temp, int start, int end){
 
 		for(int i = start; i < end; i++){
 			array[i] = temp[i];
 		}
 	}
 
-	public static void copyArray(double[] array, double[] temp, int start, int end){
+	private static void copyArray(double[] array, double[] temp, int start, int end){
 
 		for(int i = start; i < end; i++){
 			array[i] = temp[i];
 		}
 	}
 
-	public static void copyArray(char[] array, char[] temp, int start, int end){
+	private static void copyArray(char[] array, char[] temp, int start, int end){
 
 		for(int i = start; i < end; i++){
 			array[i] = temp[i];
 		}
 	}
 
-	public static void copyArray(String[] array, String[] temp, int start, int end){
+	private void copyArray(String[] array, String[] temp, int start, int end){
 
 		for(int i = start; i < end; i++){
 			array[i] = temp[i];
