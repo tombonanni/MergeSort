@@ -56,6 +56,7 @@ public class MergeSort {
 		copyArray(array, temp, start, end);
 
 	}
+	
 	private static void topDownMergeSplit(double[] array, double[] temp, int start, int end){
 
 		if(end - start < 2)
