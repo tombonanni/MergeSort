@@ -45,7 +45,7 @@ public class MergeSort {
 
 	}
 
-	public static void topDownMergeSplit(int[] array, int[] temp, int start, int end){
+	private static void topDownMergeSplit(int[] array, int[] temp, int start, int end){
 
 		if(end - start < 2)
 			return;
@@ -56,20 +56,7 @@ public class MergeSort {
 		copyArray(array, temp, start, end);
 
 	}
-	public static void topDownMergeSplit(double[] array, double[] temp, int start, int end){
-
-		if(end - start < 2)
-			return;
-		int mid = (end + start)/2;
-		topDownMergeSplit(array, temp, start, mid);
-		topDownMergeSplit(array, temp, mid, end);
-		topDownMerge(array, temp, start, mid, end);
-		copyArray(array, temp, start, end);
-
-	}
-
-	public static void topDownMergeSplit(char[] array, char[] temp, int start, int end){
-
+	private static void topDownMergeSplit(double[] array, double[] temp, int start, int end){
 
 		if(end - start < 2)
 			return;
@@ -81,7 +68,8 @@ public class MergeSort {
 
 	}
 
-	public static void topDownMergeSplit(String[] array, String[] temp, int start, int end){
+	private static void topDownMergeSplit(char[] array, char[] temp, int start, int end){
+
 
 		if(end - start < 2)
 			return;
@@ -93,7 +81,19 @@ public class MergeSort {
 
 	}
 
-	public static void topDownMerge(int[] array, int[] temp, int start, int mid, int end){
+	private static void topDownMergeSplit(String[] array, String[] temp, int start, int end){
+
+		if(end - start < 2)
+			return;
+		int mid = (end + start)/2;
+		topDownMergeSplit(array, temp, start, mid);
+		topDownMergeSplit(array, temp, mid, end);
+		topDownMerge(array, temp, start, mid, end);
+		copyArray(array, temp, start, end);
+
+	}
+
+	private static void topDownMerge(int[] array, int[] temp, int start, int mid, int end){
 
 		int i = start, j = mid;
 
@@ -110,7 +110,7 @@ public class MergeSort {
 		}
 	}
 
-	public static void topDownMerge(double[] array, double[] temp, int start, int mid, int end){
+	private static void topDownMerge(double[] array, double[] temp, int start, int mid, int end){
 
 		int i = start, j = mid;
 
@@ -127,7 +127,7 @@ public class MergeSort {
 		}
 	}
 
-	public static void topDownMerge(char[] array, char[] temp, int start, int mid, int end){
+	private static void topDownMerge(char[] array, char[] temp, int start, int mid, int end){
 
 		int i = start, j = mid;
 
@@ -144,7 +144,7 @@ public class MergeSort {
 		}
 	}
 
-	public static void topDownMerge(String[] array, String[] temp, int start, int mid, int end){
+	private static void topDownMerge(String[] array, String[] temp, int start, int mid, int end){
 
 		int i = start, j = mid;
 
